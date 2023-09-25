@@ -1,0 +1,89 @@
+body, ul {
+    margin: 0;
+    padding: 0;
+    background-color: #0f0d2e;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+h1{
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Bannière du site */
+.logo {
+    text-align: center;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+}
+
+/* Podium */
+.podium {
+    text-align: center;
+    max-width: 400px; 
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    font-size: 24px;
+    background-color: #f0f0f0;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+li:nth-child(1) {
+    background-color: silver;
+}
+
+li:nth-child(2) {
+    background-color: gold;
+}
+
+li:nth-child(3) {
+    background-color: #cd7f32;
+}
+
+/* Footer */
+.footer {
+    background-color: #00000050; 
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .footer {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
