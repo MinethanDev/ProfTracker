@@ -1,4 +1,4 @@
-![Logo](https://i.imgur.com/WwTbplB.png)
+![Logo]([https://i.imgur.com/WwTbplB.png](https://github.com/MinethanDev/ProfTracker/blob/main/banniere.png?raw=true))
 ProfTracker lets you see which courses have been cancelled the most.
 
 ## Creators
