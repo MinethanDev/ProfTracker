@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const podium = document.getElementById("podium");
 
-    // Chargez le fichier "retards.csv" directement depuis le site
     fetch("retards.csv")
         .then(response => response.text())
         .then(data => {
