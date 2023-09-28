@@ -5,17 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ProfTracker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/5/50/Closed_Book_Icon.svg" type="image/x-icon">
 </head>
 <body>
-    <div class="logo">
-        <img src="banniere.png" alt="Logo du site ProfTracker" width="1000" class="logo">
-        <h1>Podium :</h1>
+    <div class="hero">
+        <img src="banniere.png" alt="Logo du site ProfTracker" class="logo">
     </div>
-    <div id="podium"></div>
-    <script src="script.js"></script>
+
+    <div id="podium" class="podium"></div>
+
+    <!-- cette balise HTML ne s'affiche pas sur la page et doit être 
+        clonée et ajoutée au DOM dans un fichier JS pour être utilisée -->
+    <template data-podium-template>
+        <div class="position">
+            <span data-index class="index"></span>
+            <div data-matiere class="matiere">
+                <span data-name class="name"></span>
+                <span data-hours class="hours"></span>
+            </div>
+        </div>
+    </template>
 
     <footer class="footer">
-        <p>Codé avec ❤ par <b><a href="https://github.com/MinethanDev">Minethan</a></b></p>
+        <p>Codé avec ❤ par <b><a href="https://github.com/MinethanDev">Minethan</a></b> et <b><a
+                    href="https://github.com/ABFStudio">Antonin</a></b></p>
     </footer>
 </body>
+<script src="script.js"></script>
 </html>

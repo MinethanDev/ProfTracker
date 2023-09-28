@@ -1,34 +1,166 @@
-body, ul {
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap');
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #0f0d2e;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-h1{
+body {
+    background-color: #0f0d2e;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;   
+}
+
+h1 {
     color: white;
 }
 
-.container {
+/* Bannière du site */
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;;
+}
+
+/* petits écrans */
+@media (min-width: 10rem) {
+    .hero img {
+        width: 25rem;
+    }
+}
+
+/* moyens écrans */
+@media (min-width: 30rem) {
+    .hero img {
+        width: 40rem;
+        margin-bottom: 6rem;
+    }
+}
+
+/* grands écrans */
+@media (min-width: 60rem) {
+    .hero img {
+        width: 80rem;
+    }
+}
+
+/* Podium */
+.podium {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    margin-top: 2rem;
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.podium .position .index {
+    font-size: 5rem;
+}
+
+.podium .first {
+    /* height: 10rem; */
+    background-color: #eade28;
+}
+
+.podium .second {
+    height: 8rem;
+    background-color: silver;
+}
+
+.podium .third {
+    height: 6rem;
+    background-color: #da9c4d;
+    position: relative;
+}
+
+.podium .matiere {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.podium .position {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* Bannière du site */
-.logo {
-    text-align: center;
+@media (min-width: 10rem) {
+    .hero img {
+        margin: 1rem 0 6rem 0;
+    }
+
+    .podium .position {
+        width: 8rem;
+    }
+
+    .podium .matiere .hours {
+        text-align: center;
+    }
+
+    .podium .first {
+        height: 20rem;
+        translate: 8rem;
+    }
+
+    .podium .second {
+        height: 18rem;
+        translate: -8rem;
+    }
+
+    .podium .third {
+        text-align: center;
+        height: 16rem;
+    }
+
+    .podium .first .matiere {
+        top: -30%;
+    }
+    
+    .podium .second .matiere {
+        top: -40%;
+    }
+
+    .podium .third .matiere {
+        top: -50%;
+    }
+
+    .podium .matiere .name {
+        font-size: 1.5rem;
+    }
 }
 
-.logo img {
-    display: block;
-    margin: 0 auto;
-}
+@media (min-width: 50rem) {
+    .podium .position {
+        width: 18rem;
+    }
 
-/* Podium */
-.podium {
-    text-align: center;
-    max-width: 400px; 
+    .podium .first {
+        translate: 18rem;
+    }
+
+    .podium .second {
+        translate: -18rem;
+    }
+    
+    .podium .first .matiere {
+        top: -25%;
+    }
+    
+    .podium .second .matiere {
+        top: -25%;
+    }
+
+    .podium .third .matiere {
+        top: -28%;
+    }
+    
+    .podium .matiere .name {
+        font-size: 2rem;
+    }
 }
 
 ol {
@@ -46,21 +178,10 @@ li {
     display: inline-block;
 }
 
-li:nth-child(1) {
-    background-color: silver;
-}
-
-li:nth-child(2) {
-    background-color: gold;
-}
-
-li:nth-child(3) {
-    background-color: #cd7f32;
-}
 
 /* Footer */
 .footer {
-    background-color: #00000050; 
+    background-color: #00000050;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -69,21 +190,7 @@ li:nth-child(3) {
     width: 100%;
 }
 
-.footer a{
+.footer a {
     text-decoration: none;
     color: white;
-}
-
-
-/* Responsive */
-@media (max-width: 768px) {
-    .footer {
-        font-size: 28px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .footer {
-        padding: 15px 0;
-    }
 }
