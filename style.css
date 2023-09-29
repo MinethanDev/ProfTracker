@@ -87,6 +87,21 @@ h1 {
     align-items: center;
 }
 
+.table {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: white;
+    margin: 10px 0 50px 0;
+}
+
+.table th, td {
+    padding: 1rem;
+    border: 1px solid white;
+}
+
 @media (min-width: 10rem) {
     .hero img {
         margin: 1rem 0 6rem 0;
@@ -143,10 +158,16 @@ h1 {
 
     .podium .first {
         translate: 18rem;
+        animation: fadeIn 3.5s ease-in-out;
     }
 
     .podium .second {
         translate: -18rem;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    .podium .third {
+        animation: fadeIn 1s ease-in-out;
     }
     
     .podium .first .matiere,
@@ -161,20 +182,16 @@ h1 {
     .podium .matiere .name {
         font-size: 2rem;
     }
+}
 
-    .table {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 1.5rem;
-        color: white;
-        margin: 10px 0 50px 0;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
     }
-
-    .table th, td {
-        padding: 1rem;
-        border: 1px solid white;
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
     }
 }
 
