@@ -94,21 +94,25 @@ h1 {
     }
 
     .podium .position {
-        width: 8rem;
+        width: 7rem;
     }
 
     .podium .matiere .hours {
         text-align: center;
     }
 
+    .podium .position {
+        width: 7rem;
+    }
+
     .podium .first {
         height: 20rem;
-        translate: 8rem;
+        translate: 7rem;
     }
 
     .podium .second {
         height: 18rem;
-        translate: -8rem;
+        translate: -7rem;
     }
 
     .podium .third {
