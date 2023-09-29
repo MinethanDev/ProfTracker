@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap');
 
 * {
     margin: 0;
@@ -7,8 +7,9 @@
 
 body {
     background-color: #0f0d2e;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;   
+    font-family: 'Dela Gothic One', cursive;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
 h1 {
@@ -20,7 +21,7 @@ h1 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;;
+    align-items: center;
 }
 
 /* petits écrans */
@@ -51,7 +52,6 @@ h1 {
     justify-content: center;
     align-items: end;
     margin-top: 2rem;
-    font-family: 'Dela Gothic One', cursive;
 }
 
 .podium .position .index {
@@ -59,7 +59,6 @@ h1 {
 }
 
 .podium .first {
-    /* height: 10rem; */
     background-color: #eade28;
 }
 
@@ -150,10 +149,7 @@ h1 {
         translate: -18rem;
     }
     
-    .podium .first .matiere {
-        top: -25%;
-    }
-    
+    .podium .first .matiere,
     .podium .second .matiere {
         top: -25%;
     }
@@ -164,6 +160,21 @@ h1 {
     
     .podium .matiere .name {
         font-size: 2rem;
+    }
+
+    .table {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.5rem;
+        color: white;
+        margin: 10px 0 50px 0;
+    }
+
+    .table th, td {
+        padding: 1rem;
+        border: 1px solid white;
     }
 }
 
@@ -181,7 +192,6 @@ li {
     border-radius: 5px;
     display: inline-block;
 }
-
 
 /* Footer */
 .footer {
