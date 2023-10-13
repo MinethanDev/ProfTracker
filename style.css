@@ -87,6 +87,11 @@ h1 {
 .menu .menu-content ul li a {
     text-decoration: none;
     color: #fff;
+    transition: 0.3s translate;
+}
+
+.menu .menu-content ul li a:hover {
+    translate: 0 -6px;
 }
 
 /* Bannière du site */

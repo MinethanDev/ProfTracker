@@ -32,6 +32,10 @@ function buildPodiumPosition(name, hours, pos) {
     return podium
 }
 
+/**
+ * 
+ * @param {string} path Le chemin du fichier CSV à charger
+ */
 function loadCSV(path) {
     const podium = document.getElementById('podium')
     const podiumTable = document.getElementById('table')
