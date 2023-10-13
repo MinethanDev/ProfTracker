@@ -5,7 +5,7 @@
  * @param {int} pos La position sur le podium
  */
 function buildPodiumPosition(name, hours, pos) {
-    const podiumTemplate = document.querySelector('[data-podium-template]');
+    const podiumTemplate = document.querySelector('[data-podium-template]')
     // on clone l'élément <template> du HTML pour pouvoir le réutiliser à volonté
     const podium = podiumTemplate.content.cloneNode(true).children[0]
 
@@ -32,28 +32,27 @@ function buildPodiumPosition(name, hours, pos) {
     return podium
 }
 
-document.addEventListener("DOMContentLoaded", function () {
+function loadCSV(path) {
     const podium = document.getElementById('podium')
-    const podiumTable = document.getElementById('table')//.querySelector('tbody')
+    const podiumTable = document.getElementById('table')
     podiumTable.style.display = 'none'
 
-    // Chargez le fichier "retards.csv" directement depuis le site
-    fetch("retards.csv")
+    fetch(path)
         .then(response => response.text())
         .then(data => {
-            const rows = data.split('\n').map(row => row.split(','));
+            const rows = data.split('\n').map(row => row.split(','))
 
             const matieres = rows.map(row => {
                 if (row.length >= 2) {
                     return {
                         Matiere: row[0].trim(),
                         Heures: parseFloat(row[1].trim())
-                    };
+                    }
                 }
-                return null;
-            }).filter(item => item !== null); 
+                return null
+            }).filter(item => item !== null) 
 
-            matieres.sort((a, b) => b.Heures - a.Heures);
+            matieres.sort((a, b) => b.Heures - a.Heures)
 
             for (let i = 0; i < matieres.length; i++) {
                 // on créé une nouvelle position sur le podium
@@ -79,6 +78,26 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         })
         .catch(error => {
-            console.error("Une erreur s'est produite lors du chargement du fichier CSV : ", error);
-        });
-});
+            console.error("Une erreur s'est produite lors du chargement du fichier CSV : ", error)
+        })
+}
+
+function enableNavigationMenu() {
+    const open = document.getElementById('open-menu')
+    const close = document.getElementById('close-menu')
+    const menu = document.getElementById('menu-content')
+
+    open.addEventListener('click', () => {
+        menu.classList.remove('hidden')
+    })
+
+    close.addEventListener('click', () => {
+        menu.classList.add('hidden')
+    })
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Chargez le fichier "retards.csv" directement depuis le site
+    loadCSV('retards.csv')
+    enableNavigationMenu()
+})
