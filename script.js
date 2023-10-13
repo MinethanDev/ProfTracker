@@ -101,7 +101,9 @@ function enableNavigationMenu() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    // Chargez le fichier "retards.csv" directement depuis le site
-    loadCSV('retards.csv')
+    if (window.location.pathname === '/index.html') {
+        // Chargez le fichier "retards.csv" directement depuis le site uniquement depuis la page principale
+        loadCSV('retards.csv')
+    }
     enableNavigationMenu()
 })
